@@ -3,6 +3,9 @@ import { PluginFunction, PluginValidateFn, Types, removeFederation } from '@grap
 import { extname } from 'path';
 import { printSchemaWithDirectives } from '@graphql-toolkit/common';
 
+/**
+ * @description This plugin prints the merged schema as string. If multiple schemas are provided, they will be merged and printed as one schema.
+ */
 export interface SchemaASTConfig {
   /**
    * @description Include directives to Schema output.

@@ -5,36 +5,11 @@ title: TypeScript oclif
 
 This plugin generates [`oclif`](https://www.npmjs.com/package/oclif) CLI commands.
 
+[You can find a working example of this plugin here](https://github.com/kalzoo/graphql-codegen-oclif-example/)
 
 {@import ../plugins/client-note.md}
 
-## Installation
-
-[You can find a working example of this plugin here](https://github.com/kalzoo/graphql-codegen-oclif-example/)
-
-    $ yarn add @graphql-codegen/typescript @graphql-codegen/typescript-oclif
-
-The, make sure you have `typescript` plugin as well in your configuration:
-
-```yml
-schema: http://localhost:4000
-documents: "src/commands/**/*.graphql"
-generates:
-  src/types.ts:
-    - typescript
-  src/commands/:
-    preset: near-operation-file
-    presetConfig:
-      extension: .ts
-      baseTypesPath: ../types.ts
-    plugins:
-      - typescript-oclif:
-          handlerPath: ../../handler
-```
-
-
-
-## Usage
+## Usage Example
 
 With GraphQL Codegen, building a CLI tool for your GraphQL API couldn't be easier. In four steps, 
 you can have a user-friendly command-line interface:
@@ -186,9 +161,3 @@ command, for example, you can just create a file at `src/commands/fix.ts`, follo
 as you **don't** _also_ create a `fix.graphql` file next to it (in which case, it _would_ overrride
 `fix.ts` on the next run of `graphql-codegen`).
 
-## Configuration
-
-
-{@import ../generated-config/base-visitor.md}
-
-{@import ../generated-config/client-side-base-visitor.md}
